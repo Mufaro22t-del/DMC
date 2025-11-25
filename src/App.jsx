@@ -41,41 +41,17 @@ const services = [
 ];
 
 const storyImages = [
-  {
-    url: "/DMC/new photos/IMG_3921.JPG",
-    alt: "Event details",
-  },
-  {
-    url: "/DMC/new photos/IMG_4616.JPG",
-    alt: "Styled event table",
-  },
-  {
-    url: "/DMC/new photos/IMG_0094.JPG",
-    alt: "Business feature",
-  },
-  {
-    url: "/DMC/new photos/IMG_4581.JPG",
-    alt: "Additional moment",
-  },
-  {
-    url: "/DMC/IMG_0681.JPG",
-    alt: "Celebration moment",
-  },
+  { url: "DMC/new photos/IMG_3921.JPG", alt: "Event details" },
+  { url: "DMC/new photos/IMG_4616.JPG", alt: "Styled event table" },
+  { url: "DMC/new photos/IMG_0094.JPG", alt: "Business feature" },
+  { url: "DMC/new photos/IMG_4581.JPG", alt: "Additional moment" },
+  { url: "DMC/IMG_0681.JPG", alt: "Celebration moment" },
 ];
 
 const gallery = [
-  {
-    url: "/DMC/new photos/IMG_4598.JPG",
-    alt: "Event gallery image 1",
-  },
-  {
-    url: "/DMC/new photos/IMG_4444.JPG",
-    alt: "Event gallery image 2",
-  },
-  {
-    url: "/DMC/new photos/IMG_4466.JPG",
-    alt: "Event gallery image 3",
-  },
+  { url: "DMC/new photos/IMG_4598.JPG", alt: "Event gallery image 1" },
+  { url: "DMC/new photos/IMG_4444.JPG", alt: "Event gallery image 2" },
+  { url: "DMC/new photos/IMG_4466.JPG", alt: "Event gallery image 3" },
 ];
 
 function App() {
@@ -84,9 +60,9 @@ function App() {
       {/* NAVBAR */}
       <header className="site-header">
         <div className="max-w-6xl mx-auto flex items-center justify-between px-4 py-7 md:py-8">
-          <div className="flex items-center gap-5">
+            <div className="flex items-center gap-5">
             <img
-              src="/DMC/IMG_7841.JPG"
+              src={`${import.meta.env.BASE_URL}DMC/IMG_7841.JPG`}
               alt="Diamond Management Co logo"
               className="h-20 w-20 rounded-full object-cover"
             />
@@ -131,7 +107,7 @@ function App() {
               <div className="relative inline-block">
                 <div className="absolute -inset-4 rounded-3xl bg-gray-100 blur-xl" />
                 <img
-                  src="/DMC/IMG_0101.JPG"
+                  src={`${import.meta.env.BASE_URL}DMC/IMG_0101.JPG`}
                   alt="Diamond Management Co feature"
                   className="relative rounded-3xl shadow-xl w-full max-w-3xl object-cover"
                 />
@@ -220,7 +196,7 @@ function App() {
                 className="rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow"
               >
                 <img
-                  src={item.url}
+                  src={`${import.meta.env.BASE_URL}${item.url}`}
                   alt={item.alt}
                   className="h-64 w-full object-cover hover:scale-105 transition-transform duration-500"
                 />
@@ -234,7 +210,7 @@ function App() {
                 className="rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-shadow"
               >
                 <img
-                  src={item.url}
+                  src={`${import.meta.env.BASE_URL}${item.url}`}
                   alt={item.alt}
                   className="h-64 w-full object-cover hover:scale-105 transition-transform duration-500"
                 />
@@ -266,7 +242,7 @@ function App() {
                 className="overflow-hidden rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
               >
                 <img
-                  src={item.url}
+                  src={`${import.meta.env.BASE_URL}${item.url}`}
                   alt={item.alt}
                   className="h-80 w-full object-cover hover:scale-105 transition-transform duration-500"
                 />
