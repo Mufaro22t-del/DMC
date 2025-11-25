@@ -175,14 +175,7 @@ function App() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service) => (
-              <div
-                key={service.title}
-                className={`rounded-3xl p-8 flex flex-col transition-all ${
-                  service.featured
-                    ? "border-2 border-gray-900 bg-white shadow-lg"
-                    : "border border-gray-200 bg-gray-50 hover:shadow-md"
-                }`}
-              >
+              <div key={service.title} className="service-card">
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-bold mb-3">{service.title}</h3>
                 <p className="text-sm text-gray-700 mb-6">
@@ -389,7 +382,7 @@ function App() {
               <li>• Preferred date(s) & location</li>
               <li>• Approximate guest count or scope</li>
               <li>• Any themes, colours or inspiration you already have</li>
-              <li>• Your ideal budget range</li>
+              {/* <li>• Your ideal budget range</li> */}
             </ul>
             <p className="mt-6 text-xs text-gray-400">
               Providing these details helps us respond with the most tailored
