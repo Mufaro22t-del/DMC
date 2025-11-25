@@ -359,10 +359,10 @@ function App() {
               <p>
                 Email:{" "}
                 <a
-                  href="mailto:diamondmanagementco@gmail.com"
+                  href="mailto:diamond.managementco@outlook.com"
                   className="text-white underline hover:no-underline"
                 >
-                  diamondmanagementco@gmail.com
+                  diamond.managementco@outlook.com
                 </a>
               </p>
               <p>
