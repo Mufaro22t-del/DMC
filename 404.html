@@ -4,12 +4,12 @@
     <meta charset="utf-8" />
     <title>Redirecting…</title>
     <!-- Immediate fallback to site root for GitHub Pages SPA support -->
-    <meta http-equiv="refresh" content="0;url=/Dia/" />
+    <meta http-equiv="refresh" content="0;url=/" />
     <script>
       // If meta refresh is blocked, redirect preserving the path in the hash.
       (function () {
-        var base = '/Dia/';
-        var path = location.pathname.replace(/^\/Dia/, '') + location.search + location.hash;
+        var base = '/';
+        var path = location.pathname + location.search + location.hash;
         // If there is a meaningful path, append it as a hash so the SPA can handle it
         if (path && path !== '/') {
           location.replace(base + '#' + path);
