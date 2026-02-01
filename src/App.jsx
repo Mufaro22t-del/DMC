@@ -26,7 +26,7 @@ const services = [
     ],
   },
   {
-    title: "Event Management & Co-ordination",
+    title: "Event Management & Coordination",
     icon: "👥",
     description:
       "Seamless execution on your special day. We ensure everything runs perfectly while you enjoy the moment.",
@@ -52,6 +52,8 @@ const gallery = [
   { url: "DMC/new-photos/IMG_4598.JPG", alt: "Event gallery image 1" },
   { url: "DMC/new-photos/IMG_4444.JPG", alt: "Event gallery image 2" },
   { url: "DMC/new-photos/IMG_4466.JPG", alt: "Event gallery image 3" },
+  { url: "DMC/new-photos/IMG_4866.JPG?v=20251212", alt: "Event gallery image 4" },
+  { url: "DMC/new-photos/IMG_4775.JPG?v=20251212", alt: "Event gallery image 5" },
 ];
 
 function App() {
@@ -179,13 +181,13 @@ function App() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Story</h2>
             <p className="text-gray-600 text-base max-w-3xl mx-auto mb-4">
-              Diamond Management Co is a legacy which aims to bring your vision to life!
+              Diamond Management Co is a legacy that aims to bring your vision to life.
             </p>
             <p className="text-gray-600 text-sm max-w-3xl mx-auto mb-4">
-              We specialise in making your vision into a reality through event planning,
-              event management and content creation. From capturing your core
-              memories through high quality and visually captivating content, to seamless
-              event planning and coordination.
+              We specialise in turning your vision into reality through event planning,
+              event management, and content creation. From capturing your core
+              memories with high-quality, visually captivating content to seamless
+              event planning and coordination, we do it all.
             </p>
           </div>
 
@@ -236,7 +238,21 @@ function App() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-4">
-            {gallery.map((item) => (
+            {gallery.slice(0, 3).map((item) => (
+              <div
+                key={item.url}
+                className="overflow-hidden rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <img
+                  src={`${import.meta.env.BASE_URL}${item.url}`}
+                  alt={item.alt}
+                  className="h-80 w-full object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            ))}
+          </div>
+          <div className="grid md:grid-cols-2 gap-4 mt-4 max-w-2xl mx-auto">
+            {gallery.slice(3).map((item) => (
               <div
                 key={item.url}
                 className="overflow-hidden rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
@@ -258,7 +274,7 @@ function App() {
           <div className="order-2 md:order-1">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">About Us</h2>
             <p className="text-gray-600 text-base mb-4">
-              Based in Melbourne, Diamond Management Co specializes in
+              Based in Melbourne, Diamond Management Co specialises in
               bringing visions to life through expert content creation, meticulous
               event planning, and seamless management services.
             </p>
@@ -275,7 +291,7 @@ function App() {
               </li>
               <li className="flex gap-3 items-center">
                 <span className="text-lg">✓</span>
-                <span className="text-gray-700">Personalized service</span>
+                <span className="text-gray-700">Personalised service</span>
               </li>
               <li className="flex gap-3 items-center">
                 <span className="text-lg">✓</span>
